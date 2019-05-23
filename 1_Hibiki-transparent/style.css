@@ -1,0 +1,466 @@
+:root{
+	--bg-color: rgba(140, 180, 255, 0.95);
+	--bg-color-rgb: rgb(140, 180, 255);
+	--reply-bg-color: rgba(110, 170, 255, 0.2);
+	--border-color: rgba(120, 170, 255, 0.8);
+	--bg-color-light: #D6DAF0;
+}
+
+body{
+	font-family: Arial !important;
+	margin: 0px 150px !important;
+	margin-top: 10px !important;
+	padding: 0px;
+	background: url('https://i.imgur.com/fJvlQHz.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-blend-mode: lighten;
+}
+
+.unimportant, .boardlist.bottom, #new-bottom-ads{
+	display:none;
+}
+
+/**
+|
+|		POST AND REPLY STUFF
+|
+*/
+
+.hide-thread-link{
+	display: none;
+}
+
+.thread{
+	font-family: Monospace;
+	background-color: var(--bg-color);
+	color:#000;
+	padding:0px;
+	border:2px solid var(--border-color) !important;
+	margin: 2px;
+	margin-top:6px;
+	width:98.5%;
+	padding-left:1.5%;
+}
+
+.thread > .files{
+	margin-top:38px;
+}
+
+.thread .post-image{
+	margin-top: 0px !important;
+	margin-right: 20px;
+}
+
+.post > .body{
+	padding: 20px !important;
+	margin-top:0px !important;
+}
+
+.post.op.has-file.body-not-empty .body{
+	margin-top: 10px !important;
+}
+
+.post-image{
+	margin-top:0px;
+}
+
+.post{
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.reply{
+	font-family: Monospace;
+	background-color:var(--reply-bg-color) !important;
+	color:#000;
+	border:2px solid var(--border-color) !important;
+	margin: 2px 0px !important;
+	margin-left:0px !important;
+}
+
+.highlighted{
+	border: 2px solid rgba(255, 70, 180, 0.8) !important;
+}
+
+.intro{
+	background-color: var(--border-color);
+	width:100%;
+	padding-top: 5px;
+	padding-left: 0px;
+	width: 100%;
+}
+
+.intro > .post-btn{
+	font-size: 0px;
+	padding-right:20px;
+	padding-left:10px !important;
+}
+
+.op .intro{
+	margin-left: -1.5%;
+	width: calc(100% + 1.5%);
+}
+
+.showallThread{
+	display: none;
+}
+
+.post-hover{
+	background-color: var(--bg-color) !important;
+}
+.subject{
+	margin-left: 10px;
+}
+
+.op .name{
+	margin-left:40px;
+}
+
+.reply .name:after{
+	content: ' replied';
+}
+
+.name{
+	margin-left:10px;
+}
+
+.intro > .post-btn:after{
+	content: '•••';
+	font-size:14px;
+}
+
+.post .intro{
+	font-size: 17px !important;
+}
+
+.reply .intro{
+	font-size: 12px !important;
+}
+
+.thread > .op > .intro > label > .name:before{
+	content: "posted by ";
+	margin-left: -40px;
+}
+
+time:before{
+	content: 'on ';
+}
+
+.post-table-options {
+	display:table !important;
+	margin-bottom:20px;
+}
+
+.board-owners-or-users-feel-free-to-hide, .post_modified, .post-table .tbody .tr:first-child, hr{
+	display: none !important;
+}
+
+.boardlist{
+	padding:10px 0px;
+}
+
+.boardlist > span {
+    font-size: 0px;
+    padding: 0px 30px;
+}
+
+/**
+|
+|		NAVIGATION BAR STUFF
+|
+*/
+
+
+a[href="https://8ch.net"]:after{
+	content: ' Home';
+}
+
+a[href="https://8ch.net/boards.html"]:after{
+	content: ' Board index';
+}
+
+a[href="https://nerv.8ch.net/"]:after{
+	content: ' Nerve center';
+}
+
+a[href="https://8ch.net/dnsbls_bypass.php"]:after{
+	content: ' Presolve captcha';
+}
+
+a[href="https://8ch.net/faq.html"], a[href="https://8ch.net/random.php"], a[href="https://8ch.net/create.php"], a[href="https://8ch.net/bans.html"], a[href="https://8ch.net/search.php"], a[href="/mod.php"], a[href="https://8ch.net/ads.html"], a[href="https://twitter.com/infinitechan"], a[href="https://8ch.net/claim.html"], a[href="https://8ch.net/sudo/catalog.html"]{
+	display:none;
+}
+
+span[data-description="0"] a{
+	font-size:14px;
+	padding:10px 30px;
+	margin-bottom: -2px;
+}
+
+span[data-description="1"]{
+	display:none !important;
+}
+
+span[data-description="0"] a:hover, a[title="Options"]:hover{
+	background-color: #a9bdff;
+}
+
+a[href="/boardindex"]:hover{
+	background-color:none;
+}
+
+span[data-description="0"]{
+	font-size: 0px;
+	float:center;
+}
+
+a[title="Options"]:before{
+	content: 'User Options';
+	font-size: 14px;
+}
+
+a[title="Options"]{
+	font-size:0;
+	margin:0px;
+	position: fixed;
+	padding:10px 30px;
+	top:0px;
+	right: 0px ;
+}
+
+a.watchlist-toggle:after{
+	content: 'Toggle Watchlist';
+	font-size: 14px;
+}
+
+a.watchlist-toggle{
+	font-size:0px;
+	position: absolute;
+	top:40px;
+	right: 2px;
+	padding:10px 17px;
+	background: #D6DAF0;
+	border:solid 1px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.favorite-boards > a{
+	font-size: 14px;
+	padding:3px 10px;
+	display: block;
+	margin-top:3px;
+}
+
+.favorite-boards:before{
+	content: 'Favorite Boards';
+	font-size:15px;
+	padding:3px 20px;
+	margin: -10px;
+	padding-top: -10px;
+	border-bottom: solid 1px;
+}
+
+.favorite-boards:hover + .favorite-boards > a{
+	display: block;
+}
+
+.favorite-boards {
+	display: block;
+	background-color: #D6DAF0;
+	border:solid 1px;
+	height: auto;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+	position:absolute;
+	left:2px;
+	top:40px;
+	padding:10px 10px !important;
+	padding-top: 5px !important;
+}
+
+.favorite-boards:before{
+	content: 'Favorite boards';
+}
+
+.favorite-boards > a:before{
+	content: '■ /';
+}
+
+.favorite-boards > a:after{
+	content: '/';
+}
+
+.blotter{
+	font-size: 20px;
+	background-color: rgba(120, 140, 255, 0.9);
+	width:100.25%;
+	margin-left:2px;
+	color: #A00 !important;
+	margin-bottom: -2px;
+}
+
+.op.has-file .intro{
+	margin-top: -56px;
+}
+
+.op.has-file .body{
+	margin-top: -13px !important;
+}
+
+header{
+	margin: 0px !important;
+	background-color: rgba(120, 140, 255, 0.9);
+	margin-bottom: -10px !important;
+	margin-left:2px !important;
+	margin-right: -6px !important;
+	padding-bottom:20px;
+}
+
+.board_image{
+	padding-left:calc(50% - 149px);
+	padding-right:calc(50% - 145px);
+	margin-left:4px !important;
+	margin:0px !important;
+	padding-top:20px;
+	background-color: rgba(120, 140, 255, 0.9);
+	border:0px !important;
+}
+
+.pages{
+	background-color: rgba(140, 180, 255, 0.9) !important;
+	border:2px solid rgba(120, 170, 255, 0.8) !important;
+	color: #000 !important;
+}
+
+a.nerve{
+	font-family: 0px !important;
+}
+
+.post-image{
+	margin-top:45px;
+}
+
+#post-form-outer{
+	background-color: var(--bg-color) !important;
+	padding-top: 10px !important;
+	margin-left:2px !important;
+	margin-right: -6px;
+	margin-top: 10px;
+	margin-bottom:0px;
+}
+
+.board-list-tbody{
+	background-color: var(--bg-color);
+}
+
+.blotter > p {
+	margin:0px;
+}
+
+#quick-reply form {
+	background: var(--bg-color-rgb) !important;
+}
+
+div.banner{
+	margin-left: 2px;
+    margin-right: -6px;
+    margin-bottom:-10px;
+}
+
+/**
+*
+*	POST FORM SHIT
+*
+*/
+
+
+#post-form-inner{
+	width: 95%;
+	background-color: rgba(100, 100, 120, 0.1);
+	padding: 10px 20px 50px 20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#post-form-inner .dropzone {
+	background-color: var(--bg-color-rgb);
+}
+
+#post-form-inner [name="email"]{
+	width:100%;
+	border-radius: 5px;
+	margin-left: 5px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#post-form-inner input[name="subject"]::-webkit-input-placeholder::before {
+    color:#666;
+    content:"sage";
+}
+
+#post-form-inner input, #post-form-inner select, #post-form-inner textarea{
+	border:none;
+}
+
+#post-form-inner input[name="subject"], #post-form-inner textarea, #post-form-inner input[name="password"], #post-form-inner input[name="embed"], #post-form-inner input[name="email"], #post-form-inner input[name="name"]{
+	width: calc(100% - 10px);
+	border-radius: 5px;
+	margin-left: 5px;
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px;
+}
+
+#post-form-inner td > *{
+	padding: 5px;
+	outline: none;
+}
+
+#post-form-inner th, #post-form-inner tr, #post-form-inner td{
+	display:block;
+	width:100%;
+}
+
+#post-form-inner th{
+	background-color: rgba(0,0,0,0);
+}
+
+#post-form-inner form[name="post"]:before{
+	content: "new post";
+	float:left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-size: 30px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#post-form-inner .oekaki-applet{
+	padding:0px !important;
+}
+
+#post-form-inner #oekaki{
+	display: none;
+}
+
+#post-form-inner input[type="submit"]{
+	border: 1px solid var(--border-color);
+	border-radius: 5px;
+	width: auto;
+	padding:10px;
+	background-color: #88FF88;
+}
+
+#post-form-inner .show-options-cell, #post-form-inner .required-field-cell {
+	display:none;
+}
+
+#post-form-inner .dropzone-wrap{
+	margin-bottom:20px;
+}
+
+.post-table tbody{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
