@@ -145,7 +145,7 @@ body{
 }
 
 time:before{
-	content: 'on ';
+	content: 'on ';	
 }
 
 .post-table-options {
@@ -375,7 +375,7 @@ div.banner{
 */
 
 
-#post-form-inner{
+#post-form-outer #post-form-inner{
 	width: 95%;
 	background-color: rgba(100, 100, 120, 0.1);
 	padding: 10px 20px 50px 20px;
@@ -383,27 +383,27 @@ div.banner{
 	margin-bottom: 10px;
 }
 
-#post-form-inner .dropzone {
+#post-form-outer .dropzone {
 	background-color: var(--bg-color-rgb);
 }
 
-#post-form-inner [name="email"]{
+#post-form-outer [name="email"]{
 	width:100%;
 	border-radius: 5px;
 	margin-left: 5px;
 	background-color: rgba(255,255,255,0.5);
 }
 
-#post-form-inner input[name="subject"]::-webkit-input-placeholder::before {
+#post-form-outer input[name="subject"]::-webkit-input-placeholder::before {
     color:#666;
     content:"sage";
 }
 
-#post-form-inner input, #post-form-inner select, #post-form-inner textarea{
+#post-form-outer input, #post-form-outer select, #post-form-outer textarea{
 	border:none;
 }
 
-#post-form-inner input[name="subject"], #post-form-inner textarea, #post-form-inner input[name="password"], #post-form-inner input[name="embed"], #post-form-inner input[name="email"], #post-form-inner input[name="name"]{
+#post-form-outer input[name="subject"], #post-form-outer textarea, #post-form-outer input[name="password"], #post-form-outer input[name="embed"], #post-form-outer input[name="email"], #post-form-outer input[name="name"]{
 	width: calc(100% - 10px);
 	border-radius: 5px;
 	margin-left: 5px;
@@ -411,21 +411,21 @@ div.banner{
 	padding: 5px;
 }
 
-#post-form-inner td > *{
+#post-form-outer td > *{
 	padding: 5px;
 	outline: none;
 }
 
-#post-form-inner th, #post-form-inner tr, #post-form-inner td{
+#post-form-outer th, #post-form-outer tr, #post-form-outer td{
 	display:block;
 	width:100%;
 }
 
-#post-form-inner th{
+#post-form-outer th{
 	background-color: rgba(0,0,0,0);
 }
 
-#post-form-inner form[name="post"]:before{
+#post-form-outer form[name="post"]:before{
 	content: "new post";
 	float:left;
 	margin-left: 5px;
@@ -435,15 +435,15 @@ div.banner{
 	font-weight: bold;
 }
 
-#post-form-inner .oekaki-applet{
+#post-form-outer .oekaki-applet{
 	padding:0px !important;
 }
 
-#post-form-inner #oekaki{
+#post-form-outer #oekaki{
 	display: none;
 }
 
-#post-form-inner input[type="submit"]{
+#post-form-outer input[type="submit"]{
 	border: 1px solid var(--border-color);
 	border-radius: 5px;
 	width: auto;
@@ -451,16 +451,28 @@ div.banner{
 	background-color: #88FF88;
 }
 
-#post-form-inner .show-options-cell, #post-form-inner .required-field-cell {
+#post-form-outer .show-options-cell, #post-form-inner .required-field-cell {
 	display:none;
 }
 
-#post-form-inner .dropzone-wrap{
+#post-form-outer .dropzone-wrap{
 	margin-bottom:20px;
 }
 
-.post-table tbody{
+#post-form-outer .post-table tbody{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.theme-catalog .mix{
+	background-color: var(--bg-color-rgb);
+}
+.theme-catalog .mix .thread:hover{
+	background-color: var(--border-color);
+}
+
+body.theme-catalog{
+	background-color: var(--bg-color) !important;
+	height: 100%;
 }
